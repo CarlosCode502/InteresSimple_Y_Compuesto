@@ -16,7 +16,7 @@ namespace InteresCompuesto
         public Double Interes;
         public int Tiempo;
         public Double CapitalFinal;
-        public Double valor;
+        public Decimal valor;
 
         public InteresCompuesto()
         {
@@ -32,7 +32,16 @@ namespace InteresCompuesto
                 MessageBox.Show("!!!DEBE LLENAR LOS CAMPOS REQUERIDOS¡¡");
             }
             else
-            {                
+            {  
+                //if(txt_capFinal_IC.Text != "Q 00.00" && txt_capFinal_IC.Text != " ")
+                //{
+                //    //el capital inicial sera ahora el capital final anterior
+                //    txt_capInicial_IC.Text = valor.ToString("Q 0,0.00");
+                //    txt_Interes_IC.Clear();
+                //    txt_Tiempo_IC.Clear();
+                //    txt_capFinal_IC.Text = "Q 00.00";
+                //}
+
                 ////vuelve a validar si existe un valor o resultado en txt capital final para irlo sumando año a año aumentando
                 //if(txt_capFinal_IC.Text != "Q 00.00")
                 //{
@@ -54,6 +63,8 @@ namespace InteresCompuesto
                 //else
                 //{
 
+                //else
+                //{
                 //FUNCIONAL
                 CapInicial = Convert.ToDouble(txt_capInicial_IC.Text);
 
@@ -65,18 +76,9 @@ namespace InteresCompuesto
                 Double potencia1 = Math.Pow(forIn,Tiempo);
 
                 CapitalFinal = CapInicial * potencia1;
+                valor = Convert.ToDecimal(CapitalFinal);
                 txt_capFinal_IC.Text = CapitalFinal.ToString("Q 0,0.00");
-                        
-                    
-
-
-
-
-
-
-
-
-                    
+                //}
 
                 //Double potencia = Math.Pow(Tiempo, Op);
                 //potencia = potencia + CapInicial;
