@@ -18,6 +18,9 @@ namespace InteresCompuesto
 
             //Establece la ventana al centro de la pantalla al iniciar el programa
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            
+
         }
 
         private void btn_interesSimple_Click(object sender, EventArgs e) 

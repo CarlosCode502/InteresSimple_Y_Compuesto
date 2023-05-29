@@ -16,7 +16,7 @@ namespace InteresCompuesto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InteresCompuesto());
+            Application.Run(new Form1());
 
             //ESTE CODIGO SE QUITO YA QUE NO ES NECESARIO OCULTAR LA VENTANA PRINCIPAL
             ////CODIGO PARA EVITAR QUE EL PROGRAMA SE CIERRE AL CERRAR EL MAIN PRINCIPAL

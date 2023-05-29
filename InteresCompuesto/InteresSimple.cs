@@ -93,6 +93,7 @@ namespace InteresCompuesto
             }
         }
 
+        //metodo para limpiar los campos
         private void btn_Borrar_Click(object sender, EventArgs e)
         {
             txt_capInicial.Clear();
@@ -101,7 +102,7 @@ namespace InteresCompuesto
             txt_is_Total.Clear();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
