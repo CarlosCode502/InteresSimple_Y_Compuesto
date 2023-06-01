@@ -21,18 +21,32 @@ namespace InteresCompuesto
         public InteresCompuesto()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;            
+        }
+
+        public void RatonMove(object sender, MouseEventArgs e)
+        {
+            var boton = (Button)sender;
+            boton.FlatAppearance.BorderColor = Color.Goldenrod;
+            boton.FlatAppearance.BorderSize = 4;
+        }
+
+        public void RatonLeave(object sender, EventArgs e)
+        {
+            var boton = (Button)sender;
+            boton.FlatAppearance.BorderColor = Color.Black;
+            boton.FlatAppearance.BorderSize = 2;
         }
 
         private void btn_calcular_IC_Click(object sender, EventArgs e)
         {
             //Primer validación que verificara que los campos requeridos no se encuentren vacios
-            if(String.IsNullOrEmpty(txt_capInicial_IC.Text) || String.IsNullOrEmpty(txt_Interes_IC.Text) || String.IsNullOrEmpty(txt_Tiempo_IC.Text))
+            if (String.IsNullOrWhiteSpace(txt_capInicial_IC.Text) || txt_capInicial_IC.Text == "0.00" || String.IsNullOrWhiteSpace(txt_Interes_IC.Text) || txt_Interes_IC.Text == "0.0" || String.IsNullOrWhiteSpace(txt_Tiempo_IC.Text) || txt_Tiempo_IC.Text == "0")
             {
-                MessageBox.Show("!!!DEBE LLENAR LOS CAMPOS REQUERIDOS¡¡");
+                MessageBox.Show("¡Ingrese los valores que desea calcular!","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
-            {  
+            {                 
                 //if(txt_capFinal_IC.Text != "Q 00.00" && txt_capFinal_IC.Text != " ")
                 //{
                 //    //el capital inicial sera ahora el capital final anterior
@@ -101,14 +115,14 @@ namespace InteresCompuesto
         private void btn_borrar_IC_Click(object sender, EventArgs e)
         {
             txt_capInicial_IC.Text = "0.00";
-            txt_Interes_IC.Clear();
-            txt_Tiempo_IC.Clear();
-            txt_capFinal_IC.Text = "Q 00.00";
+            txt_Interes_IC.Text = "0.0";
+            txt_Tiempo_IC.Text = "0";
+            txt_capFinal_IC.Text = "Q 0,0.00";
         }
 
         private void btn_salir_IC_Click(object sender, EventArgs e)
         {
             this.Close();
-        }        
+        }
     }
 }

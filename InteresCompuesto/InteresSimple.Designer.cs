@@ -29,6 +29,7 @@ namespace InteresCompuesto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InteresSimple));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,151 +44,153 @@ namespace InteresCompuesto
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Cerrar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 37);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Capital inicial:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 104);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tasa de interés:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 179);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tiempo:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 245);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Interés simple total:";
             // 
             // txt_capInicial
             // 
-            this.txt_capInicial.Location = new System.Drawing.Point(144, 29);
+            this.txt_capInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txt_capInicial, "txt_capInicial");
             this.txt_capInicial.Name = "txt_capInicial";
-            this.txt_capInicial.Size = new System.Drawing.Size(196, 20);
-            this.txt_capInicial.TabIndex = 4;
             this.txt_capInicial.Tag = "";
-            this.txt_capInicial.Text = "0.00";
-            this.txt_capInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_tasaInteres
             // 
-            this.txt_tasaInteres.Location = new System.Drawing.Point(144, 97);
+            this.txt_tasaInteres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txt_tasaInteres, "txt_tasaInteres");
             this.txt_tasaInteres.Name = "txt_tasaInteres";
-            this.txt_tasaInteres.Size = new System.Drawing.Size(76, 20);
-            this.txt_tasaInteres.TabIndex = 5;
-            this.txt_tasaInteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_tiempo
             // 
-            this.txt_tiempo.Location = new System.Drawing.Point(122, 172);
+            this.txt_tiempo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txt_tiempo, "txt_tiempo");
             this.txt_tiempo.Name = "txt_tiempo";
-            this.txt_tiempo.Size = new System.Drawing.Size(98, 20);
-            this.txt_tiempo.TabIndex = 6;
-            this.txt_tiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_is_Total
             // 
-            this.txt_is_Total.Enabled = false;
-            this.txt_is_Total.Location = new System.Drawing.Point(122, 238);
+            this.txt_is_Total.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txt_is_Total, "txt_is_Total");
             this.txt_is_Total.Name = "txt_is_Total";
-            this.txt_is_Total.Size = new System.Drawing.Size(218, 20);
-            this.txt_is_Total.TabIndex = 7;
-            this.txt_is_Total.Text = "Q 0.00";
-            this.txt_is_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_is_Total.ReadOnly = true;
             // 
             // cmb_tiempo_AnuMens
             // 
             this.cmb_tiempo_AnuMens.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cmb_tiempo_AnuMens, "cmb_tiempo_AnuMens");
+            this.cmb_tiempo_AnuMens.ForeColor = System.Drawing.Color.Goldenrod;
             this.cmb_tiempo_AnuMens.FormattingEnabled = true;
             this.cmb_tiempo_AnuMens.Items.AddRange(new object[] {
-            "Dias",
-            "Meses",
-            "Bimestres",
-            "Trimestres",
-            "Semestres",
-            "Años"});
-            this.cmb_tiempo_AnuMens.Location = new System.Drawing.Point(238, 171);
+            resources.GetString("cmb_tiempo_AnuMens.Items"),
+            resources.GetString("cmb_tiempo_AnuMens.Items1"),
+            resources.GetString("cmb_tiempo_AnuMens.Items2"),
+            resources.GetString("cmb_tiempo_AnuMens.Items3"),
+            resources.GetString("cmb_tiempo_AnuMens.Items4"),
+            resources.GetString("cmb_tiempo_AnuMens.Items5")});
             this.cmb_tiempo_AnuMens.Name = "cmb_tiempo_AnuMens";
-            this.cmb_tiempo_AnuMens.Size = new System.Drawing.Size(102, 21);
-            this.cmb_tiempo_AnuMens.TabIndex = 9;
             // 
             // btn_Calcular
             // 
-            this.btn_Calcular.Location = new System.Drawing.Point(36, 290);
+            this.btn_Calcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Calcular.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Calcular.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btn_Calcular, "btn_Calcular");
             this.btn_Calcular.Name = "btn_Calcular";
-            this.btn_Calcular.Size = new System.Drawing.Size(118, 36);
-            this.btn_Calcular.TabIndex = 10;
-            this.btn_Calcular.Text = "Calcular";
             this.btn_Calcular.UseVisualStyleBackColor = true;
             this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
+            this.btn_Calcular.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.btn_Calcular.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RatonMove);
             // 
             // btn_Borrar
             // 
-            this.btn_Borrar.Location = new System.Drawing.Point(199, 290);
+            this.btn_Borrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Borrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Borrar.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btn_Borrar, "btn_Borrar");
             this.btn_Borrar.Name = "btn_Borrar";
-            this.btn_Borrar.Size = new System.Drawing.Size(118, 36);
-            this.btn_Borrar.TabIndex = 11;
-            this.btn_Borrar.Text = "Borrar";
             this.btn_Borrar.UseVisualStyleBackColor = true;
             this.btn_Borrar.Click += new System.EventHandler(this.btn_Borrar_Click);
+            this.btn_Borrar.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.btn_Borrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RatonMove);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(118, 29);
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.Goldenrod;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Q";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(119, 101);
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.Goldenrod;
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "%";
             // 
             // btn_Cerrar
             // 
-            this.btn_Cerrar.Location = new System.Drawing.Point(122, 344);
+            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_Cerrar.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btn_Cerrar, "btn_Cerrar");
             this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(118, 36);
-            this.btn_Cerrar.TabIndex = 14;
-            this.btn_Cerrar.Text = "Cerrar";
             this.btn_Cerrar.UseVisualStyleBackColor = true;
             this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            this.btn_Cerrar.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.btn_Cerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RatonMove);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // InteresSimple
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 403);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -202,9 +205,8 @@ namespace InteresCompuesto
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.Name = "InteresSimple";
-            this.Text = "Interes Simple";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +228,9 @@ namespace InteresCompuesto
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_Cerrar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -22,7 +22,30 @@ namespace InteresCompuesto
             InitializeComponent();
             //this.CenterToScreen();
             this.StartPosition = FormStartPosition.CenterScreen;
+            cmb_tiempo_AnuMens.SelectedIndex = 0;
         }
+
+        public void RatonMove(object sender, MouseEventArgs e)
+        {
+            var boton = (Button)sender;
+            boton.FlatAppearance.BorderColor = Color.Goldenrod;
+            boton.FlatAppearance.BorderSize = 4;
+        }
+
+        public void RatonLeave(object sender, EventArgs e)
+        {
+            var boton = (Button)sender;
+            boton.FlatAppearance.BorderColor = Color.Black;
+            boton.FlatAppearance.BorderSize = 2;
+
+        }
+
+        //public void RatonLeave(object sender, MouseEventArgs e)
+        //{
+        //    var boton = (Button)sender;
+        //    boton.FlatAppearance.BorderColor = Color.Black;
+        //}
+
 
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
@@ -35,9 +58,9 @@ namespace InteresCompuesto
 
 
             //si el campo capInicial esta vacio debe mostrar un msj que pida ingresar los valores
-            if(String.IsNullOrEmpty(txt_capInicial.Text) || String.IsNullOrEmpty(txt_tasaInteres.Text) || String.IsNullOrEmpty(txt_tiempo.Text))
+            if(String.IsNullOrEmpty(txt_capInicial.Text) || String.IsNullOrEmpty(txt_tasaInteres.Text) || String.IsNullOrEmpty(txt_tiempo.Text) || txt_capInicial.Text == "0.00" || txt_tasaInteres.Text == "0.0" || txt_tiempo.Text == "0")
             {
-                MessageBox.Show("¡¡¡Debe llenar todos los campos!!!");
+                MessageBox.Show("¡Ingrese los valores que desea calcular!", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             //sino se procedera a lo siguiente                
             else
@@ -96,10 +119,11 @@ namespace InteresCompuesto
         //metodo para limpiar los campos
         private void btn_Borrar_Click(object sender, EventArgs e)
         {
-            txt_capInicial.Clear();
-            txt_tasaInteres.Clear();
-            txt_tiempo.Clear();
-            txt_is_Total.Clear();
+            cmb_tiempo_AnuMens.SelectedIndex = 0;
+            txt_capInicial.Text = "0.00";
+            txt_tasaInteres.Text = "0.0";
+            txt_tiempo.Text = "0";
+            txt_is_Total.Text = "Q 0,0.00";
         }
 
         private void btn_Cerrar_Click(object sender, EventArgs e)

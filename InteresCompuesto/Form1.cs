@@ -18,9 +18,6 @@ namespace InteresCompuesto
 
             //Establece la ventana al centro de la pantalla al iniciar el programa
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            
-
         }
 
         private void btn_interesSimple_Click(object sender, EventArgs e) 
@@ -39,7 +36,13 @@ namespace InteresCompuesto
 
         private void btn_Salir_Click(object sender, EventArgs e)
         {
-            Application.Exit();//se cierra el programa 
+            var result = MessageBox.Show("¿Esta segur@ que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No){}
+            else
+            {
+                Application.Exit();//se cierra el programa 
+            }
         }
     }
 }
