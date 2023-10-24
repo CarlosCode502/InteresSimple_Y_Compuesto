@@ -21,10 +21,12 @@ namespace InteresCompuesto
         {
             InitializeComponent();
             //this.CenterToScreen();
-            this.StartPosition = FormStartPosition.CenterScreen;
-            cmb_tiempo_AnuMens.SelectedIndex = 0;
+            this.StartPosition = FormStartPosition.CenterScreen; //inicia la ventana al centro de la pantalla
+            cmb_tiempo_AnuMens.SelectedIndex = 0;//el combobox inicia o muestra el elemento en la posicion 0 al iniciar el programa
         }
 
+        //Al posicionar el mouse sobre el objeto especifico este cambiara su color y tamaño de borde 
+        //esto con el fin de crear un efecto de entrada o enfoque
         public void RatonMove(object sender, MouseEventArgs e)
         {
             var boton = (Button)sender;
@@ -32,6 +34,7 @@ namespace InteresCompuesto
             boton.FlatAppearance.BorderSize = 4;
         }
 
+        //tiene la función a través de los eventos del teclado y tiene lugar cuando el puntero sale del foco del componente
         public void RatonLeave(object sender, EventArgs e)
         {
             var boton = (Button)sender;
@@ -60,6 +63,7 @@ namespace InteresCompuesto
             //si el campo capInicial esta vacio debe mostrar un msj que pida ingresar los valores
             if(String.IsNullOrEmpty(txt_capInicial.Text) || String.IsNullOrEmpty(txt_tasaInteres.Text) || String.IsNullOrEmpty(txt_tiempo.Text) || txt_capInicial.Text == "0.00" || txt_tasaInteres.Text == "0.0" || txt_tiempo.Text == "0")
             {
+                //Msg personalizado 
                 MessageBox.Show("¡Ingrese los valores que desea calcular!", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             //sino se procedera a lo siguiente                

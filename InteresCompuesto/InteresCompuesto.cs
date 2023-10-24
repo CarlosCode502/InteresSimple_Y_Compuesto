@@ -86,8 +86,8 @@ namespace InteresCompuesto
 
                 Tiempo = int.Parse(txt_Tiempo_IC.Text);
 
-                Double forIn = (1 + (Interes / 100));
-                Double potencia1 = Math.Pow(forIn,Tiempo);
+                Double forIn = (1 + (Interes / 100));//se realiza una operación de suma y división aparte y en un orden especifico 
+                Double potencia1 = Math.Pow(forIn,Tiempo);//el resultado de la op anterior pasa a una variable que forma parte de otra op para 2cuad
 
                 CapitalFinal = CapInicial * potencia1;
                 valor = Convert.ToDecimal(CapitalFinal);
