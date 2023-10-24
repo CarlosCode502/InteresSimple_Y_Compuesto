@@ -132,9 +132,15 @@ namespace InteresCompuesto
 
         private void lbl_ayuda_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Para obtener el interés simple es: \n(CapInicial * (Intéres/100) * Tiempo)", "Fórmula", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void lbl_ayuda_MouseMove(object sender, MouseEventArgs e)
+        {
 
         }
 
+        //
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -47,6 +47,7 @@ namespace InteresCompuesto
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_ayuda = new System.Windows.Forms.Label();
+            this.lbl_text = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -250,17 +251,29 @@ namespace InteresCompuesto
             this.lbl_ayuda.BackColor = System.Drawing.Color.DarkGray;
             this.lbl_ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lbl_ayuda.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_ayuda.Location = new System.Drawing.Point(3, 2);
+            this.lbl_ayuda.Location = new System.Drawing.Point(3, 3);
             this.lbl_ayuda.Name = "lbl_ayuda";
             this.lbl_ayuda.Size = new System.Drawing.Size(25, 24);
             this.lbl_ayuda.TabIndex = 20;
             this.lbl_ayuda.Text = " ?";
+            // 
+            // lbl_text
+            // 
+            this.lbl_text.AutoSize = true;
+            this.lbl_text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_text.Location = new System.Drawing.Point(34, 11);
+            this.lbl_text.Name = "lbl_text";
+            this.lbl_text.Size = new System.Drawing.Size(44, 13);
+            this.lbl_text.TabIndex = 21;
+            this.lbl_text.Text = "Fórmula";
+            this.lbl_text.Visible = false;
             // 
             // InteresCompuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 418);
+            this.Controls.Add(this.lbl_text);
             this.Controls.Add(this.lbl_ayuda);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -306,5 +319,6 @@ namespace InteresCompuesto
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl_ayuda;
+        private System.Windows.Forms.Label lbl_text;
     }
 }
