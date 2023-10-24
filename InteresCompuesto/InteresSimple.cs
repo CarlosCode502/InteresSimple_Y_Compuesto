@@ -130,6 +130,11 @@ namespace InteresCompuesto
             txt_is_Total.Text = "Q 0,0.00";
         }
 
+        private void lbl_ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();

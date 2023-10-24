@@ -48,6 +48,7 @@ namespace InteresCompuesto
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lbl_ayuda = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -183,10 +184,18 @@ namespace InteresCompuesto
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
+            // lbl_ayuda
+            // 
+            resources.ApplyResources(this.lbl_ayuda, "lbl_ayuda");
+            this.lbl_ayuda.BackColor = System.Drawing.Color.DarkGray;
+            this.lbl_ayuda.Name = "lbl_ayuda";
+            this.lbl_ayuda.Click += new System.EventHandler(this.lbl_ayuda_Click);
+            // 
             // InteresSimple
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_ayuda);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -232,5 +241,6 @@ namespace InteresCompuesto
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_ayuda;
     }
 }
