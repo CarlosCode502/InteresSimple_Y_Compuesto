@@ -191,12 +191,15 @@ namespace InteresCompuesto
             this.lbl_ayuda.BackColor = System.Drawing.Color.DarkGray;
             this.lbl_ayuda.Name = "lbl_ayuda";
             this.lbl_ayuda.Click += new System.EventHandler(this.lbl_ayuda_Click);
-            this.lbl_ayuda.MouseLeave += new System.EventHandler(this.RatonLeave);
+            this.lbl_ayuda.MouseLeave += new System.EventHandler(this.lbl_ayuda_MouseLeave);
             this.lbl_ayuda.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_ayuda_MouseMove);
             // 
             // lbl_text
             // 
             resources.ApplyResources(this.lbl_text, "lbl_text");
+            this.lbl_text.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_text.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_text.Name = "lbl_text";
             // 
             // InteresSimple

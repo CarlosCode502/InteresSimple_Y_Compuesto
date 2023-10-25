@@ -256,14 +256,19 @@ namespace InteresCompuesto
             this.lbl_ayuda.Size = new System.Drawing.Size(25, 24);
             this.lbl_ayuda.TabIndex = 20;
             this.lbl_ayuda.Text = " ?";
+            this.lbl_ayuda.Click += new System.EventHandler(this.lbl_ayuda_Click);
+            this.lbl_ayuda.MouseLeave += new System.EventHandler(this.lbl_ayuda_MouseLeave);
+            this.lbl_ayuda.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_ayuda_MouseMove);
             // 
             // lbl_text
             // 
             this.lbl_text.AutoSize = true;
+            this.lbl_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_text.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbl_text.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_text.Location = new System.Drawing.Point(34, 11);
+            this.lbl_text.Location = new System.Drawing.Point(33, 9);
             this.lbl_text.Name = "lbl_text";
-            this.lbl_text.Size = new System.Drawing.Size(44, 13);
+            this.lbl_text.Size = new System.Drawing.Size(46, 15);
             this.lbl_text.TabIndex = 21;
             this.lbl_text.Text = "Fórmula";
             this.lbl_text.Visible = false;

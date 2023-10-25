@@ -120,6 +120,21 @@ namespace InteresCompuesto
             txt_capFinal_IC.Text = "Q 0,0.00";
         }
 
+        private void lbl_ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para obtener el interés compuesto es: \n(CapInicial) * (1 + (Intéres / 100))ʌTiempo", "Fórmula", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void lbl_ayuda_MouseMove(object sender, MouseEventArgs e)
+        {
+            lbl_text.Visible = true;
+        }
+
+        private void lbl_ayuda_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_text.Visible = false;
+        }
+
         private void btn_salir_IC_Click(object sender, EventArgs e)
         {
             this.Close();

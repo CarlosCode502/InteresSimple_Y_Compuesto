@@ -137,10 +137,15 @@ namespace InteresCompuesto
 
         private void lbl_ayuda_MouseMove(object sender, MouseEventArgs e)
         {
-
+            lbl_text.Visible = true;
         }
 
-        //
+        private void lbl_ayuda_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_text.Visible = false;
+        }
+
+        //Cierra la ventana iS
         private void btn_Cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
