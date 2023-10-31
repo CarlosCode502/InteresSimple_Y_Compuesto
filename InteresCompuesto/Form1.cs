@@ -24,14 +24,16 @@ namespace InteresCompuesto
         {
             //Se crea una instancia del form IS
             InteresSimple IS = new InteresSimple();
-            IS.ShowDialog();//se muestra el form en un cuadro de dialogo
+            //se muestra el form en un cuadro de dialogo
+            IS.ShowDialog();
         }
 
         private void btn_interesCompuesto_Click(object sender, EventArgs e)
         {          
             //instancia del form IC
             InteresCompuesto IC = new InteresCompuesto();
-            IC.ShowDialog();//cuadro de dialogo
+            //cuadro de dialogo
+            IC.ShowDialog();
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
